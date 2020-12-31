@@ -1,22 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import {CountdownModule} from 'ngx-countdown'
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { CountdownModule } from 'ngx-countdown'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms'
-import { from } from 'rxjs';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { FormsModule } from '@angular/forms'
+import { RegisterComponent } from './rfs/register.component'
+import { ReactiveFormsModule } from '@angular/forms'
+import { TdfComponent } from './tdf/tdf.component'
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, RegisterComponent, TdfComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CountdownModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
