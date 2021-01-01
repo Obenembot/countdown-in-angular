@@ -7,10 +7,11 @@ import { AppComponent } from './app.component'
 import { FormsModule } from '@angular/forms'
 import { RegisterComponent } from './rfs/register.component'
 import { ReactiveFormsModule } from '@angular/forms'
-import { TdfComponent } from './tdf/tdf.component'
+import { TdfComponent } from './tdf/tdf.component';
+import { UsingFBComponent } from './using-fb/using-fb.component'
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, TdfComponent],
+  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,6 +1,7 @@
+<h3>Template Driver Forms</h3>
 {{dignose}}
 <div class="container">
-    <h3>Template Driver Forms</h3>
+  
     
         <div class="form-group">
             <label for="name">Name</label>
@@ -17,9 +18,9 @@
         <select class="form-control">
             <option *ngFor="let skill of skills" value="skill">{{skill}}</option>
         </select>
-        <button type="submit"  (click)="onSubmit()" class="btn btn-success">Submit</button>
-
     </div>
+    <button type="submit"  (click)="onSubmit()" class="btn btn-success">Submit</button>
+
 
 
 </div>

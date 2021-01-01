@@ -1,0 +1,44 @@
+<h3>Form Builder</h3>
+<div class="container">
+
+    <form [formGroup]="userProfileForm"  >
+
+        <label>
+            First Name:
+            <input class="form-control" type="text" formControlName="firstName">
+        </label>
+        <br />
+        <label>
+            Last Name:
+            <input class="form-control" type="text" formControlName="lastName">
+        </label>
+        <br />
+        <label>
+            Phone:
+            <input class="form-control" type="number" formControlName="phone">
+        </label>
+        <div formGroupName="addresses">
+            Addresses
+            <br />
+            <label>
+                address1:
+                <input class="form-control" type="text" formControlName="address1">
+            </label>
+            <br />
+            <label>
+                address2:
+                <input class="form-control" type="text" formControlName="address2">
+            </label>
+            <br />
+            <label>
+                state:
+                <input class="form-control" type="text" formControlName="state">
+            </label><br />
+            <label>
+                zip:
+                <input class="form-control" type="text" formControlName="zip">
+            </label>
+        </div>
+    </form>
+    <button class="btn btn-success" type="submit" [disabled]="!userProfileForm.valid" (click)="onSubmit()">Submit</button>
+</div>

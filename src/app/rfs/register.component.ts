@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup } from '@angular/forms'
+import { FormControl, FormGroup,Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-rfs',
@@ -20,11 +20,12 @@ export class RegisterComponent implements OnInit {
   }
 
   employeeForm = new FormGroup({
-    Name: new FormControl(''),
+    Name: new FormControl('',Validators.required),
     Designation: new FormControl(''),
+    address:new FormGroup({
       country: new FormControl(''),
       city: new FormControl('')
-  
+    })
   })
 
   onSubmit () {

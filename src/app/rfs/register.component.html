@@ -2,7 +2,7 @@
     <h5>Form Control</h5>
     <label>
         Employee Name:
-        <input type="text" [formControl]="EmployeeName">
+        <input type="text" [formControl]="EmployeeName" class="form-control">
     </label>
 
 
@@ -18,33 +18,35 @@
         <h5>Employee:</h5>
         <label>
             Name:
-            <input type="text" formControlName="Name">
+            <input type="text" formControlName="Name" class="form-control">
         </label>
-
+        <br />
         <label>
             Designation:
-            <input type="text" formControlName="Designation">
+            <input type="text" formControlName="Designation" class="form-control">
         </label>
         <br />
         <h5>Address:</h5>
-        <label>
-            Country:
-            <input type="text" formControlName="country">
-        </label>
-
-        <label>
-            City:
-            <input type="text" formControlName="city">
-        </label>
+        <div formGroupName="address">
+            <label>
+                Country:
+                <input type="text" formControlName="country" class="form-control">
+            </label>
+            <br />
+            <label>
+                City:
+                <input type="text" formControlName="city" class="form-control">
+            </label>
+        </div>
+        <label>Options:</label>
+        <select class="form-control">
+            <option *ngFor="let skill of skills" value="skill">{{skill}}</option>
+        </select>
     </form>
 
-    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
-        <button type="Submit" class="btn btn-success">Submit </button>
-    </form>
+        <button type="Submit" class="btn btn-success" [disabled]="!employeeForm.valid" (click)="onSubmit()">Submit </button>
+   
 
-    <label>Options:</label>
-    <select class="form-control">
-        <option *ngFor="let skill of skills" value="skill">{{skill}}</option>
-    </select>
+   
 
 </div>
