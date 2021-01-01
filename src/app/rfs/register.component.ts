@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup,Validators } from '@angular/forms'
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-rfs',
@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit (): void {}
 
   skills = ['Java', 'QSL', 'C++', 'Python']
-  
+
   EmployeeName = new FormControl('')
 
   updateEmployeeName () {
@@ -20,16 +20,19 @@ export class RegisterComponent implements OnInit {
   }
 
   employeeForm = new FormGroup({
-    Name: new FormControl('',Validators.required),
+    Name: new FormControl('', Validators.required),
     Designation: new FormControl(''),
-    address:new FormGroup({
+    address: new FormGroup({
       country: new FormControl(''),
       city: new FormControl('')
     })
   })
 
   onSubmit () {
-   
+    console.log('Name >>>  ' + this.employeeForm.controls['Name'].value)
+    console.log('Designation >>> ' + this.employeeForm.get('Designation').value)
+
     console.log(this.employeeForm.value)
+    console.log("Accessing from "+this.employeeForm.get('address').get('country').value)
   }
 }

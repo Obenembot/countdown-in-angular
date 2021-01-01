@@ -29,5 +29,10 @@ export class UsingFBComponent implements OnInit {
     var firstName = this.userProfileForm.controls['firstName'].value
     var lastName = this.userProfileForm.get('lastName').value
     console.log("First Name is "+firstName+" : Last Name is "+lastName)
+
+    console.log("Accessing Address")
+    console.log('Accessing Address >>>> using [ , ] >>' + this.userProfileForm.get(['addresses','address1']).value)
+    console.log('Accessing Address >>>> using get().get() >>' + this.userProfileForm.get('addresses').get('address2').value)
+
   }
 }

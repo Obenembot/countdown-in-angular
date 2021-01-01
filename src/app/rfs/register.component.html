@@ -14,7 +14,7 @@
     <h5>Form Control Ends</h5>
     <h5>Form Group Start's</h5>
 
-    <form [formGroup]="employeeForm">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
         <h5>Employee:</h5>
         <label>
             Name:
@@ -42,11 +42,12 @@
         <select class="form-control">
             <option *ngFor="let skill of skills" value="skill">{{skill}}</option>
         </select>
+
+        <button type="Submit" class="btn btn-success" [disabled]="!employeeForm.valid">Submit </button>
+
     </form>
 
-        <button type="Submit" class="btn btn-success" [disabled]="!employeeForm.valid" (click)="onSubmit()">Submit </button>
-   
+    <!-- Note When Using (ngSubmit) the submit button needs to be inside the form -->
 
-   
 
 </div>
