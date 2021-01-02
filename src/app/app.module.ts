@@ -9,11 +9,12 @@ import { RegisterComponent } from './rfs/register.component'
 import { ReactiveFormsModule } from '@angular/forms'
 import { TdfComponent } from './tdf/tdf.component';
 import { UsingFBComponent } from './using-fb/using-fb.component';
-import { VcComponent } from './vc/vc.component'
+import { VcComponent } from './vc/vc.component';
+import { FaComponent } from './fa/fa.component'
 
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent, VcComponent],
+  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent, VcComponent, FaComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
