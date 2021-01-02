@@ -1,11 +1,22 @@
 <style>
-
-
 </style>
+<h3>Reactive Forms</h3>
 
-Welcome TO Timer World
-
+<app-rfs></app-rfs>
 <br><br>
+<app-tdf></app-tdf>
+<br><br>
+<app-using-fb></app-using-fb>
+<br><br>
+<app-vc></app-vc>
+<br><br>
+<app-fa></app-fa>
+<br><br>
+<app-validate></app-validate>
+<br><br>
+<app-usingfirebase></app-usingfirebase>
+<br><br>
+Welcome TO Timer World
 <countdown style="font-size: 22px;" [config]="{leftTime:30}"></countdown>
 <br>
 <countdown style="font-size: 22px;" [config]="{leftTime:3600}"></countdown>
@@ -15,5 +26,7 @@ Welcome TO Timer World
 <button style="font-size: 22px;" (click)="count.pause()">Pause</button>
 <button style="font-size: 22px;" (click)="count.stop()">Stop</button>
 <button style="font-size: 22px;" (click)="count.restart()">Re-Start</button>
+<br /><br /><br />
+
 
 <router-outlet></router-outlet>

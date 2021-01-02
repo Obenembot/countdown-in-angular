@@ -1,0 +1,29 @@
+<h3>Value Change</h3>
+<div class="container">
+
+    <form [formGroup]="valuechangeForm" (ngSubmit)="register()">
+        <input class="form-control" type="text" placeholder="First Name" formControlName="firstName">
+        <input class="form-control" type="text" placeholder="Last Name" formControlName="lastName">
+        <input class="form-control" type="number" placeholder="Age" formControlName="age">
+        <div class="row">
+
+            <div class="col-sm-10">
+                <button class="btn btn-primary" type="submit" [disabled]="!valuechangeForm.valid">Submit</button>
+                <button class="btn btn-link" type="reset">Resert</button>
+            </div>
+        </div>
+    </form>
+    <h3>Button class Style</h3>
+    <div class="container">
+        <button type="button" class="btn">Basic</button>
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+
+</div>

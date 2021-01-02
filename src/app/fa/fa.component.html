@@ -1,0 +1,32 @@
+<h3>Form Array</h3>
+{{personForm.value | json}}
+<div class="container">
+    <form [formGroup]="personForm">
+        <label>
+            First Name:
+            <input type="text" class="form-control" formControlName="firstName">
+        </label>
+        <div formArrayName="phones">
+
+            <div *ngFor="let phone of phoneForms.controls; let i = index;" [formGroupName]="i">
+                <label>
+                    Area:
+                    <input type="text" placeholder="Area" class="form-control" formControlName="area">
+                </label>
+                <label>
+                    prefix:
+                    <input type="text" placeholder="Prefix" class="form-control" formControlName="prefix">
+                </label>
+                <label>
+                    line:
+                    <input type="number" placeholder="Line" class="form-control" formControlName="line">
+                </label>
+                <button type="submit" class="btn btn-danger" (click)="deletePhone(i)">Delete Phone</button>
+
+            </div>
+        </div>
+    </form>
+    <button type="submit" class="btn btn-success" (click)="addPhone()">Add Phone</button>
+    <button type="submit" class="btn btn-warning" (click)="removeAllPhoneDetails()">Clear Phone Details</button>
+
+</div>

@@ -1,0 +1,50 @@
+<h3>Form Validation</h3>
+<div class="container">
+
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <h5>Employee:</h5>
+        <label>
+            Name:
+            <input type="text" formControlName="name" class="form-control">
+            <i *ngIf="name.invalid">
+                Name is valid
+            </i>
+        </label>
+        <br />
+        <label>
+            Age:
+            <input type="number" formControlName="age" class="form-control">
+            <i *ngIf="age.errors?.min">
+                {{age.errors.min.actual}} is young to use this app
+            </i>
+            <i *ngIf="age.errors?.max" style="color: red; font-size: 12px;">
+                {{age.errors.max.actual}} is old to use this app
+            </i>
+        </label>
+        <br />
+        <label>
+            Email:
+            <input type="text" formControlName="email" class="form-control">
+            <i *ngIf="email.invalid">
+                Email is valid
+            </i>
+        </label>
+        <br />
+        <label>
+            Password:
+            <input type="text" formControlName="password" class="form-control">
+            <i *ngIf="password.errors">
+                Password Pattern and lenght must be above 6.
+               e.g aD@@@@14d, aDXYIQ2764*
+            </i>
+        </label>
+        <br />
+
+        <button type="Submit" class="btn btn-success" [disabled]="!employeeForm.valid">Submit </button>
+
+    </form>
+
+    <!-- Note When Using (ngSubmit) the submit button needs to be inside the form -->
+
+
+</div>

@@ -1,0 +1,17 @@
+h4 {
+  font-weight: bolder;
+  font-family: 'Arial', Georgia, Times, 'Times New Roman', serif;
+}
+
+input {
+  width: 224%;
+}
+
+select {
+  width: 50%;
+}
+
+i {
+  color: red;
+  font-size: 12px;
+}

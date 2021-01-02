@@ -1,0 +1,53 @@
+<div class="container">
+    <h5>Form Control</h5>
+    <label>
+        Employee Name:
+        <input type="text" [formControl]="EmployeeName" class="form-control">
+    </label>
+
+
+    <p>Value:{{EmployeeName.value}}</p>
+
+    <p>
+        <button (click)="updateEmployeeName()" class="btn btn-success">Refresh</button>
+    </p>
+    <h5>Form Control Ends</h5>
+    <h5>Form Group Start's</h5>
+
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <h5>Employee:</h5>
+        <label>
+            Name:
+            <input type="text" formControlName="Name" class="form-control">
+        </label>
+        <br />
+        <label>
+            Designation:
+            <input type="text" formControlName="Designation" class="form-control">
+        </label>
+        <br />
+        <h5>Address:</h5>
+        <div formGroupName="address">
+            <label>
+                Country:
+                <input type="text" formControlName="country" class="form-control">
+            </label>
+            <br />
+            <label>
+                City:
+                <input type="text" formControlName="city" class="form-control">
+            </label>
+        </div>
+        <label>Options:</label>
+        <select class="form-control">
+            <option *ngFor="let skill of skills" value="skill">{{skill}}</option>
+        </select>
+
+        <button type="Submit" class="btn btn-success" [disabled]="!employeeForm.valid">Submit </button>
+
+    </form>
+
+    <!-- Note When Using (ngSubmit) the submit button needs to be inside the form -->
+
+
+</div>
