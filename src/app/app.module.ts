@@ -8,16 +8,18 @@ import { FormsModule } from '@angular/forms'
 import { RegisterComponent } from './rfs/register.component'
 import { ReactiveFormsModule } from '@angular/forms'
 import { TdfComponent } from './tdf/tdf.component';
-import { UsingFBComponent } from './using-fb/using-fb.component'
+import { UsingFBComponent } from './using-fb/using-fb.component';
+import { VcComponent } from './vc/vc.component'
+
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent],
+  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent, VcComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CountdownModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
