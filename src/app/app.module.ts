@@ -10,11 +10,13 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { TdfComponent } from './tdf/tdf.component';
 import { UsingFBComponent } from './using-fb/using-fb.component';
 import { VcComponent } from './vc/vc.component';
-import { FaComponent } from './fa/fa.component'
+import { FaComponent } from './fa/fa.component';
+import { ValidateComponent } from './validate/validate.component';
+import { UsingfirebaseComponent } from './usingfirebase/usingfirebase.component'
 
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent, VcComponent, FaComponent],
+  declarations: [AppComponent, RegisterComponent, TdfComponent, UsingFBComponent, VcComponent, FaComponent, ValidateComponent, UsingfirebaseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
